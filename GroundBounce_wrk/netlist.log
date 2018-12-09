@@ -1,0 +1,48 @@
+; Top Design: "GroundBounce_lib:Inv:schematic"
+; Netlisted using Hierarchy Policy: "Standard"
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="GroundBounce_lib:Inv:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+"MODpmos35":MOSFET2  N__4 V_in V_out N__4 Length=4e-7 Width=WP Ad=AdrainP As=AdrainP Pd=PdrainP Ps=PdrainP Mode=1 Noise=yes 
+V_Source:SRC1  V_in 0 Type="VtPulse" V_Tran=pulse(time, 0 V,3.3 V,3 nsec,0.1 nsec,0.1 nsec,6.4 usec,12.8 usec) SaveCurrent=1 
+"MODnmos35":MOSFET1  V_out V_in 0 0 Length=4e-7 Width=WN Ad=AdrainN As=AdrainN Pd=PdrainN Ps=PdrainN Mode=1 Noise=yes 
+V_Source:SRC2  N__4 0 Type="V_DC" Vdc=VDD V SaveCurrent=1 
+C:C1  V_out 0 C=Cload pF 
+model MODpmos35 MOSFET NMOS=0 PMOS=1 Idsmod=8 Version=3.1 Mobmod=1 Capmod=2 Lint=1.649204e-9 Ll=0 Lln=1 Lw=0 Lwn=1 Lwl=0 Wint=5.145753e-8 Wl=0 Wln=1 Ww=0 Wwn=1 Wwl=0 Tnom=27 Tox=7.7e-9 Cj=1.391149e-3 Mj=0.5577335 Cjsw=3.955431e-10 Mjsw=0.281155 Pb=0.99 Pbsw=0.99 Cgso=2.307e-10 Cgdo=2.307e-10 Cgbo=0 Xpart=0.4 Dwg=-1.127594e-8 Dwb=1.134015e-8 Nch=1.7e17 Xj=1.5e-7 U0=153.8963998 Vth0=-0.7253844 Pvth0=3.851168e-3 K1=0.4300035 K2=-0.0168451 Pk2=6.593235e-4 K3=29.1133014 K3b=-4.8838973 W0=2.448022e-6 Nlx=1.312736e-7 Dvt0=0.6612563 Dvt1=0.444662 Dvt2=-0.1181847 Dvt0w=0 Dvt1w=5.3e6 Dvt2w=-0.032 Ua=3.868902e-10 Ub=1.34742e-18 Uc=-1.93034e-11 Delta=0.01 Rdsw=2.843009e3 Prdsw=-162.9197485 Prwg=1.16773e-3 Prwb=0.1 Wr=1 Vsat=9.651846e4 A0=1.0141954 Keta=-8.23149e-3 Lketa=2.290499e-3 Wketa=-1.815566e-3 Ags=0.3929405 A1=0 A2=1 B0=1.681901e-6 B1=5e-6 Voff=-0.15 Nfactor=1.2915801 Cdsc=1.413317e-4 Cdscb=0 Cdscd=0 Cit=0 Eta0=0.6976214 Etab=-3.889763e-3 Dsub=0.8877574 Drout=0 Pclm=3.3268298 Pdiblc1=5.404243e-3 Pdiblc2=2.257507e-5 Pdiblcb=2.37525e-3 Pscbe1=2.968383e10 Pscbe2=1.303846e-8 Pvag=1.6832436 Ute=-1.5 At=3.3e4 Ua1=4.31e-9 Ub1=-7.61e-18 Uc1=-5.6e-11 Kt1=-0.11 Kt1l=0 Kt2=0.022 Prt=0 Gdsnoi=1 Noia=9.9e18 Noib=2.4e3 Noic=1.4e-12 
+model MODnmos35 MOSFET NMOS=1 PMOS=0 Idsmod=8 Version=3.1 Mobmod=1 Capmod=2 Lint=1.046932e-9 Ll=0 Lln=1 Lw=0 Lwn=1 Lwl=0 Wint=6.902592e-8 Wl=0 Wln=1 Ww=0 Wwn=1 Wwl=0 Tnom=27 Tox=7.7e-9 Cj=9.250086e-4 Mj=0.3750922 Cjsw=1.88997e-10 Mjsw=0.1557289 Pb=0.829352 Pbsw=0.9897343 Cgso=1.96e-10 Cgdo=1.96e-10 Cgbo=0 Xpart=0.4 Dwg=-1.658507e-8 Dwb=5.281886e-9 Nch=1.7e17 Xj=1.5e-7 U0=418.319228 Vth0=0.5068216 Pvth0=-0.0110745 K1=0.5749847 K2=0.0128401 Pk2=7.546534e-4 K3=4.6022201 K3b=1.2547359 W0=1e-5 Nlx=1.900328e-7 Dvt0=7.5799894 Dvt1=0.8392029 Dvt2=-0.0168709 Dvt0w=0 Dvt1w=5.3e6 Dvt2w=-0.032 Ua=1.006254e-10 Ub=1.962016e-18 Uc=6.055129e-11 Delta=0.01 Rdsw=1.019438e3 Prdsw=-106.2339935 Prwg=-1e-3 Prwb=-1e-3 Wr=1 Vsat=1.316502e5 A0=0.9976849 Keta=-4.470486e-3 Lketa=-2.710986e-3 Wketa=-3.146977e-3 Ags=0.2896963 A1=0 A2=1 B0=1.723836e-6 B1=5e-6 Voff=-0.1240329 Nfactor=0.3628286 Cdsc=1.527511e-3 Cdscb=0 Cdscd=0 Cit=0 Eta0=4.406846e-3 Etab=0 Dsub=0.0655522 Drout=0.8997796 Pclm=0.4522542 Pdiblc1=0.5806181 Pdiblc2=4.462594e-3 Pdiblcb=0 Pscbe1=7.245872e9 Pscbe2=5e-10 Pvag=7.710019e-3 Ute=-1.5 At=3.3e4 Ua1=4.31e-9 Ub1=-7.61e-18 Uc1=-5.6e-11 Kt1=-0.11 Kt1l=0 Kt2=0.022 Prt=0 Gdsnoi=1 
+
+VDD=3.3
+Cload=0.1
+WP=60e-6
+WN=20e-6
+
+AdrainP=WP*1e-6
+PdrainP=WP+2e-6
+
+AdrainN=WN*1e-6
+PdrainN=WN+2e-6
+Tran:Tran1 StartTime=0.0 nsec StopTime=30 usec MaxTimeStep=1 nsec LimitStepForTL=yes TimeStepControl=2 TruncTol=7.0 ChargeTol=1.0e-14 IntegMethod=0 MaxGearOrder=2 \
+Mu=0.5 MaxOrder=4 Freq[1]=1.0 GHz Order[1]=3 HB_Window=no \
+HB_Sol=no ImpApprox=no ShortTL_Delay=1.0 psec ImpMode=1 UseInitCond=no \
+LoadGminDC=no CheckKCL=yes CheckOnlyDeltaV=yes OverloadAlert=no DeviceBypass=no \
+MaxIters=10 MaxItersDC=200 DevOpPtLevel=0 StatusLevel=2 OutputAllPoints=yes \
+NoiseScale=1 ImpEnforcePassivity=yes \
+OutputPlan="Tran1_Output" 
+
+OutputPlan:Tran1_Output \
+      Type="Output" \
+      UseNodeNestLevel=yes \
+      NodeNestLevel=2 \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2 \
+      UseDeviceCurrentNestLevel=no \
+      DeviceCurrentNestLevel=0 \
+      DeviceCurrentDeviceType="All" \
+      DeviceCurrentSymSyntax=yes \
+      UseCurrentNestLevel=yes \
+      CurrentNestLevel=999 \
+      UseDeviceVoltageNestLevel=no \
+      DeviceVoltageNestLevel=0 \
+      DeviceVoltageDeviceType="All"
+

@@ -1,0 +1,5 @@
+INCLUDE $HPEESOF_DIR/oalibs/analog_rf.defs
+INCLUDE $HPEESOF_DIR/oalibs/dsp.defs
+INCLUDE X:/TNE089/TNE089_Project_wrk/RF_Transistors_vendor_kit/lib.defs
+DEFINE GroundBounce_lib GroundBounce_lib
+ASSIGN GroundBounce_lib libMode shared

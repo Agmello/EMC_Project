@@ -1,0 +1,13 @@
+
+hpeesofsim (*) 470.shp Oct 16 2017, MINT version 4
+    (64-bit windows built: Tue Oct 17, 2017 04:23:43 +0000)
+Copyright 1989 - 2017 Keysight Technologies.
+
+
+
+TRAN Tran1[1] <GroundBounce_lib:cell_1:schematic>   time=(6.39 us->6.41 us)
+
+
+Resource usage:
+  Total stopwatch time     =     1.49 seconds.
+
