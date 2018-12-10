@@ -1,0 +1,7 @@
+groundbounce test with different resistor is at 78kHz
+
+groundbounce test at different f is with 1k Ohm resistor.
+(212k är 312k)
+
+
+wodecoupling & wdecoupling 1.2MHz
